@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | DataInsight with Lenix</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">DataInsight with Lenix</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="container">
+      <h1>Get in Touch</h1>
+      <p>Whether you want to collaborate, have a question, or just want to say hi — my inbox is open.</p>
+
+      <!-- ✅ Updated Form for Netlify -->
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
+
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="direct-links">
+        <p>Or reach me via:</p>
+        <ul>
+          <li><a href="mailto:lenixowino@gmail.com">📧 Email</a></li>
+          <li><a href="https://github.com/LenCodeLab" target="_blank">💻 GitHub</a></li>
+          <li><a href="https://linkedin.com/in/lenixowino" target="_blank">🔗 LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Lenix Owino. All rights reserved.</p>
+    <div class="social-links">
+      <a href="https://github.com/LenCodeLab" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/lenixowino" target="_blank">LinkedIn</a>
+      <a href="mailto:lenixowino@gmail.com">Email</a>
+    </div>
+  </footer>
+</body>
+</html>

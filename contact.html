@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8" />
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Lenix Owino | Data Analyst</title>
   <meta name="description" content="Get in touch with Lenix Owino, a data analyst based in Nairobi, Kenya. Connect for data analysis projects or collaborations." />
   <meta name="keywords" content="contact Lenix Owino, data analyst, Nairobi, portfolio, Kenya" />
   <meta name="author" content="Lenix Owino" />
   <link rel="stylesheet" href="assets/css/style.css" />
-
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RLWX8JEZKW"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RLWX8JEZKW');
+</script>
 <body>
   <!-- Navigation -->
   <header>
@@ -30,13 +38,8 @@
       <h1>Get in Touch</h1>
       <p>Use the form below to reach out. I’ll respond as soon as possible.</p>
 
-      <!-- ✅ Secure Netlify Form -->
-      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form">
-        <input type="hidden" name="form-name" value="contact" />
-        <p hidden>
-          <label>Don’t fill this out: <input name="bot-field" /></label>
-        </p>
-
+      <!-- ✅ Custom Contact Form -->
+      <form id="contactForm" class="contact-form">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your name" required />
 
@@ -66,8 +69,32 @@
       <a href="https://github.com/LenCodeLab" target="_blank" rel="noopener">GitHub</a>
       <a href="https://linkedin.com/in/lenixowino" target="_blank" rel="noopener">LinkedIn</a>
       <a href="contact.html">Contact</a>
-
     </div>
   </footer>
+
+  <!-- JavaScript to Send Data to FastAPI -->
+  <script>
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch("http://127.0.0.1:8000/contact", {
+          method: "POST",
+          body: formData
+        });
+
+        const result = await response.text();
+        alert(result);
+        form.reset();
+      } catch (error) {
+        alert("Failed to send message. Please try again later.");
+        console.error("Error:", error);
+      }
+    });
+  </script>
 </body>
 </html>

@@ -13,7 +13,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-RLWX8JEZKW"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag(){dataLayer.push(arguments);} 
   gtag('js', new Date());
 
   gtag('config', 'G-RLWX8JEZKW');
@@ -37,7 +37,16 @@
     <div class="container">
       <h1>My Projects</h1>
       <div class="project-grid">
-        
+
+        <!-- Project 0: Telco Churn Analysis (Added at top) -->
+        <div class="project-card">
+          <img src="assets/images/project-telco-churn.png" alt="Telco Customer Churn Analysis Dashboard" />
+          <h3>Telco Customer Churn Analysis</h3>
+          <p>Comprehensive customer churn analysis with data cleaning, feature engineering, visualization, and predictive modeling. Includes an interactive dashboard for stakeholder insights.</p>
+          <p><strong>Tools:</strong> Python, Pandas, Scikit-learn, Streamlit</p>
+          <a href="https://telecommunication-customer-churn-insights.onrender.com" target="_blank" class="project-btn">GitHub Repo</a>
+        </div>
+
         <!-- Project 1 -->
         <div class="project-card">
           <img src="assets/images/project-radiotherapy-qa.png" alt="Radiotherapy QA Dashboard Screenshot" />
@@ -91,3 +100,4 @@
   </footer>
 </body>
 </html>
+
